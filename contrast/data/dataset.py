@@ -196,8 +196,7 @@ def pil_loader(path):
         data = ZipReader.read(path)
         img = Image.open(io.BytesIO(data))
     else:
-        with open(path, 'rb') as f:
-            img = Image.open(f)
+        img = Image.open(path)
     return img.convert('RGB')
 
 
